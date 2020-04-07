@@ -39,7 +39,7 @@ router.put('/:id', (req, res) => {
 })
 //REMOVE
 router.delete('/:id', (req, res) => {
-    Projects.remove(req.params.id, )
+    Projects.remove(req.params.id)
     .then(count => {
         if(count > 0) {
             res.status(200).json({ message: 'The item has been nuked' });
